@@ -108,3 +108,10 @@ Dataset classes:
 Parasitized
 
 Uninfected
+## Download Trained Model
+
+Due to large file size, the trained model is not included in this repository.
+
+Download the trained model from Google Drive:
+
+https://drive.google.com/file/d/1MtOBD-q-i2cic1EdGbIYF0iBRRMBjeMR/view?usp=sharing
