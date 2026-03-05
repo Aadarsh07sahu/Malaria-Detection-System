@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prediction Result</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family: Arial, sans-serif;
+
+background:url("https://img.freepik.com/free-vector/clean-medical-background_53876-97927.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+height:100vh;
+
+}
+
+/* glass card */
+
+.container{
+
+background:rgba(255,255,255,0.9);
+padding:40px;
+
+border-radius:15px;
+
+width:400px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+backdrop-filter: blur(8px);
+
+}
+
+/* heading */
+
+h1{
+
+color:#2b7a78;
+margin-bottom:20px;
+
+}
+
+/* info rows */
+
+.info{
+
+margin-bottom:20px;
+
+}
+
+.info-row{
+
+margin:10px 0;
+font-size:16px;
+
+}
+
+.info-row strong{
+
+color:#2b7a78;
+
+}
+
+/* result highlight */
+
+.result{
+
+font-size:18px;
+font-weight:bold;
+color:#e74c3c;
+
+}
+
+/* uploaded image */
+
+img{
+
+margin-top:20px;
+
+max-width:250px;
+
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+}
+
+/* button */
+
+a{
+
+display:inline-block;
+
+margin-top:25px;
+
+padding:10px 20px;
+
+border-radius:8px;
+
+background:linear-gradient(90deg,#2bb6a3,#58d0c2);
+
+color:white;
+
+text-decoration:none;
+
+transition:0.3s;
+
+}
+
+a:hover{
+
+background:linear-gradient(90deg,#1fa392,#44b8aa);
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<h1>Malaria Detection Result</h1>
+
+<div class="info">
+
+<div class="info-row">
+<strong>Name:</strong>
+{{ username }}
+</div>
+
+<div class="info-row">
+<strong>Age:</strong>
+{{ userage }}
+</div>
+
+<div class="info-row result">
+<strong>Prediction:</strong>
+{{ result }}
+</div>
+
+</div>
+
+<img src="{{ image_url }}" alt="Uploaded Image">
+
+<br>
+
+<a href="/">Detect Another Image</a>
+
+</div>
+
+</body>
+
+</html>

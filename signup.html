@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Signup</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family: Arial, sans-serif;
+
+background:url("https://img.freepik.com/free-vector/clean-medical-background_53876-97927.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+height:100vh;
+
+}
+
+/* glass card */
+
+.container{
+
+background:rgba(255,255,255,0.9);
+padding:40px;
+
+border-radius:15px;
+
+width:350px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+backdrop-filter: blur(8px);
+
+}
+
+/* heading */
+
+h1{
+
+color:#2b7a78;
+margin-bottom:25px;
+
+}
+
+/* input fields */
+
+input{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+
+border-radius:8px;
+border:1px solid #cfd8dc;
+
+background:#f7fbfc;
+font-size:15px;
+
+}
+
+/* button */
+
+button{
+
+width:100%;
+padding:12px;
+
+border:none;
+border-radius:8px;
+
+background:linear-gradient(90deg,#2bb6a3,#58d0c2);
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+button:hover{
+
+background:linear-gradient(90deg,#1fa392,#44b8aa);
+
+}
+
+/* link */
+
+p{
+margin-top:20px;
+}
+
+a{
+
+text-decoration:none;
+color:#2bb6a3;
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<h1>Create Account</h1>
+
+<form method="POST">
+
+<input
+type="text"
+name="username"
+required
+placeholder="Enter username"
+/>
+
+<input
+type="password"
+name="password"
+required
+placeholder="Enter password"
+/>
+
+<button type="submit">Signup</button>
+
+</form>
+
+<p>
+Already have an account?
+<a href="{{ url_for('login') }}">Login</a>
+</p>
+
+</div>
+
+</body>
+
+</html>

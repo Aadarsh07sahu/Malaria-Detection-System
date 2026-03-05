@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Malaria Detection System</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+
+background:url("https://img.freepik.com/free-vector/clean-medical-background_53876-97927.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+height:100vh;
+margin:0;
+}
+
+/* card same login page jaisa */
+
+.card{
+
+background:rgba(255,255,255,0.85);
+padding:40px;
+width:350px;
+
+border-radius:15px;
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+backdrop-filter:blur(8px);
+
+}
+
+/* heading */
+
+h1{
+color:#2b7a78;
+margin-bottom:25px;
+}
+
+/* inputs */
+
+input{
+
+width:100%;
+padding:12px;
+margin:10px 0;
+
+border-radius:8px;
+border:1px solid #cfd8dc;
+
+background:#f7fbfc;
+font-size:15px;
+
+}
+
+/* button */
+
+button{
+
+width:100%;
+padding:12px;
+margin-top:10px;
+
+border:none;
+border-radius:8px;
+
+background:linear-gradient(90deg,#2bb6a3,#58d0c2);
+color:white;
+
+font-size:16px;
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+button:hover{
+background:linear-gradient(90deg,#1fa392,#44b8aa);
+}
+
+/* loader */
+
+.loader{
+border:10px solid #f3f3f3;
+border-top:10px solid #2bb6a3;
+border-radius:50%;
+
+width:60px;
+height:60px;
+
+animation:spin 1s linear infinite;
+
+display:none;
+margin:20px auto;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* logout */
+
+a{
+text-decoration:none;
+color:#2bb6a3;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="card">
+
+<h1>Malaria Detection System</h1>
+
+<form id="form" action="/" method="POST" enctype="multipart/form-data">
+
+<input
+type="text"
+name="username"
+required
+placeholder="Enter name"
+/>
+
+<input
+type="number"
+name="userage"
+required
+placeholder="Enter age"
+/>
+
+<input
+type="file"
+name="image"
+accept="image/*"
+required
+/>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<div class="loader" id="loader"></div>
+
+<p>
+<a href="{{ url_for('logout') }}">Logout</a>
+</p>
+
+</div>
+
+
+<script>
+
+const form=document.getElementById("form")
+const loader=document.getElementById("loader")
+
+form.addEventListener("submit",function(){
+
+loader.style.display="block"
+
+})
+
+</script>
+
+</body>
+</html>
